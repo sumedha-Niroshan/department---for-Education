@@ -3,7 +3,7 @@ import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import { app } from "../firebase";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { signInSuccess } from "../Redux/User/userSlice";
+import { signInFailure, signInSuccess } from "../Redux/User/userSlice";
 
 export default function OAuth() {
   const navigate = useNavigate();
@@ -26,6 +26,10 @@ export default function OAuth() {
         }),
       });
       const data = await res.json();
+      if (data.success === false) {
+        dispatch(signInFailure(data.message));
+        return;
+      }
       dispatch(signInSuccess(data));
       navigate("/");
     } catch (error) {
