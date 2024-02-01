@@ -85,7 +85,7 @@ export default function SignUp() {
         className="bg-[#1C83E5] p-3 text-xl text-white font-semibold rounded-lg">
         {loading ? "Loading" : "Sign up"}
         </button>
-        <p className="font-semibold text-[#509FEA] text-center">OR</p>
+        <p className="font-semibold text-[#509FEA] text-center -my-3">OR</p>
         <OAuth/>
       </form>
 

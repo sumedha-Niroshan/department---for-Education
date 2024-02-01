@@ -110,8 +110,10 @@ export default function SignIn() {
         >
           {loading ? "Loading" : "Sign in"}
         </button>
-        {formData.role === "user"?<div> <p className="font-semibold text-[#509FEA] text-center">OR</p>
-        <OAuth/></div>: ''}
+        {formData.role === "user"? <p className="font-semibold text-[#509FEA] text-center -my-3">OR</p>
+       : ''}
+       {formData.role === "user"? <OAuth/>
+       : ''}
         
       </form>
 
