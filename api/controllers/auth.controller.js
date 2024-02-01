@@ -21,37 +21,34 @@ export const signIn = async (req, res, next) => {
   try {
     let validUser;
 
-    if (role === 'admin') {
-      validUser = await User.findOne({ email, role: 'admin' });
+    if (role === "admin") {
+      validUser = await User.findOne({ email, role: "admin" });
       if (!validUser) {
-        return next(errorHandler(404, 'Admin not found'));
+        return next(errorHandler(404, "Admin not found"));
       }
-    } else if (role === 'user') {
-      validUser = await User.findOne({ email, role: 'user' });
+    } else if (role === "user") {
+      validUser = await User.findOne({ email, role: "user" });
       if (!validUser) {
-        return next(errorHandler(404, 'User not found'));
+        return next(errorHandler(404, "User not found"));
       }
     } else {
-      return next(errorHandler(400, 'Invalid role'));
+      return next(errorHandler(400, "Invalid role"));
     }
 
     const validPassword = bcryptjs.compareSync(password, validUser.password);
 
     if (!validPassword) {
-      return next(errorHandler(401, 'Wrong credentials!'));
+      return next(errorHandler(401, "Wrong credentials!"));
     }
 
     const token = jwt.sign({ id: validUser.id }, process.env.JWT_SECRET);
 
-   
     const { password: pass, ...rest } = validUser._doc;
 
-    
     res
-      .cookie('access_token', token, { httpOnly: true })
+      .cookie("access_token", token, { httpOnly: true })
       .status(200)
       .json(rest);
-
   } catch (error) {
     next(error);
   }
@@ -90,6 +87,15 @@ export const google = async (req, res, next) => {
         .status(200)
         .json(rest);
     }
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const signOut = (req, res, next) => {
+  try {
+    res.clearCookie("access_token");
+    res.status(200).json("User has been logged out!");
   } catch (error) {
     next(error);
   }

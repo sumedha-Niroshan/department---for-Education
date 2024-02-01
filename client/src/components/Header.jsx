@@ -33,7 +33,7 @@ export default function Header() {
           ""
         )}
 
-        <ul className="flex gap-6 font-semibold text-base  md:text-xl items-center">
+        <ul className="flex gap-6 font-normal text-base  md:text-xl items-center">
           <Link to="/">
             <li className="hidden sm:inline hover:underline">Home</li>
           </Link>
