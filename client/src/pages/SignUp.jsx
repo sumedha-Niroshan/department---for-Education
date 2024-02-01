@@ -2,6 +2,7 @@ import React from "react";
 import { UserIcon, EnvelopeIcon, KeyIcon } from "@heroicons/react/24/solid";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import OAuth from "../components/OAuth";
 
 export default function SignUp() {
   const navigate = useNavigate();
@@ -79,10 +80,13 @@ export default function SignUp() {
             onChange={handleChange}
           />
         </div>
-        <button className="bg-[#1C83E5] p-3 text-xl text-white font-semibold rounded-lg">
-          Sign up
+        <button 
+        disabled ={loading}
+        className="bg-[#1C83E5] p-3 text-xl text-white font-semibold rounded-lg">
+        {loading ? "Loading" : "Sign up"}
         </button>
         <p className="font-semibold text-[#509FEA] text-center">OR</p>
+        <OAuth/>
       </form>
 
       <p className="text-center text-[#509FEA] my-4">
@@ -91,7 +95,7 @@ export default function SignUp() {
           <span className="font-semibold underline">Login</span>
         </Link>
       </p>
-      {error && <p className="text-red-500 mt-5">{error}</p>}
+      {error && <p className="text-red-500 mt-5 text-center">{error}</p>}
     </div>
   );
 }

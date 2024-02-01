@@ -33,7 +33,7 @@ export default function Header() {
           <Link to="/application">
             <li className="hidden  hover:underline">Application</li>
           </Link>
-          <Link to='/sign-up'>
+          <Link to='/sign-in'>
             <li className="bg-[#1C83E5] px-4 py-1 text-white rounded-lg ">Sign in</li>
           </Link>
         </ul>
