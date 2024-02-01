@@ -8,7 +8,6 @@ export default function SignUp() {
   const [formData, setFormData] = useState({});
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-  
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
@@ -42,11 +41,11 @@ export default function SignUp() {
   };
 
   return (
-    <div className="max-w-lg mx-auto p-3 bg-white my-7">
+    <div className="max-w-lg mx-auto p-3 bg-white my-7 rounded-lg">
       <h1 className="text-3xl font-semibold text-[#509FEA] text-center  py-7 ">
         Sign up
       </h1>
-      <form className="flex flex-col gap-7 px-6">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-7 px-6">
         <div className="flex gap-3 items-center border border-[#509FEA] rounded-lg p-3 px-4">
           <UserIcon className="h-6 w-6 text-[#A19B9B]" />
 
@@ -80,10 +79,7 @@ export default function SignUp() {
             onChange={handleChange}
           />
         </div>
-        <button
-          onClick={handleSubmit}
-          className="bg-[#1C83E5] p-3 text-xl text-white font-semibold rounded-lg"
-        >
+        <button className="bg-[#1C83E5] p-3 text-xl text-white font-semibold rounded-lg">
           Sign up
         </button>
         <p className="font-semibold text-[#509FEA] text-center">OR</p>
