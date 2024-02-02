@@ -18,7 +18,7 @@ export default function Header() {
           </div>
         </Link>
 
-        {role === "user"  ? (
+        {role === "user" ? (
           <form className="bg-white p-3 max-w-lg rounded-lg flex items-center hover:border hover:border-[#509FEA]">
             <input
               type="text"
@@ -35,11 +35,15 @@ export default function Header() {
 
         <ul className="flex gap-6 font-normal text-base  md:text-xl items-center">
           <Link to="/">
-            <li className="hidden sm:inline hover:underline">Home</li>
+            <li className=" hover:underline">Home</li>
           </Link>
           {role === "user" && currentUser ? (
             <Link to="/application">
               <li className="hidden sm:inline hover:underline">Application</li>
+            </Link>
+          ) : role === "admin" ? (
+            <Link to="/admin-dashbord">
+              <li className=" hover:underline">Dashbord</li>
             </Link>
           ) : (
             ""
@@ -52,7 +56,7 @@ export default function Header() {
                 className="w-10 h-10 rounded-full"
               />
             </Link>
-          ) : role === "admin" ? (
+          ) : role === "admin" && currentUser ? (
             <Link to="/admin-profile">
               <img
                 src={currentUser.avatar}

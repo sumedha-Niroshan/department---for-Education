@@ -25,8 +25,7 @@ export default function SignIn() {
     role: "user",
   });
 
-  console.log(formData);
-
+  
   const handleChange = (e) => {
     if (e.target.id === "password" || e.target.id === "email") {
       setFormData({ ...formData, [e.target.id]: e.target.value });

@@ -12,9 +12,7 @@ import {
   updateInStart,
   updateInSuccess,
   updateInFailure,
-  deleteUserFailure,
-  deleteUserStart,
-  deleteUserSuccess,
+
   signoutUserFailure,
   signoutUserStart,
   signoutUserSuccess,
@@ -22,7 +20,7 @@ import {
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-const UserProfile = () => {
+const AdminProfile = () => {
   const { currentUser, loading, error } = useSelector((state) => state.user);
   const fileRef = useRef(null);
   const dispatch = useDispatch();
@@ -91,23 +89,7 @@ const UserProfile = () => {
     }
   };
 
-  const handleDeleteUser = async () => {
-    try {
-      dispatch(deleteUserStart());
-      const res = await fetch(`/api/user/delete/${currentUser._id}`, {
-        method: "DELETE",
-      });
-      const data = await res.json();
-      if (data.success === false) {
-        dispatch(deleteUserFailure(data.message));
-        return;
-      }
-      dispatch(deleteUserSuccess(data));
-      navigate("/");
-    } catch (error) {
-      dispatch(deleteUserFailure(error.message));
-    }
-  };
+
 
   const handleSignOut = async () => {
     try {
@@ -128,7 +110,7 @@ const UserProfile = () => {
   return (
     <div className="p-3 max-w-lg mx-auto bg-white mt-4">
       <h1 className="text-3xl font-semibold text-center my-7 text-[#509FEA]">
-        User Profile
+        Admin Profile
       </h1>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <input
@@ -172,6 +154,7 @@ const UserProfile = () => {
           id="email"
           className="border p-3 rounded-lg"
           onChange={handleChange}
+          readOnly
         />
         <input
           type="password"
@@ -188,13 +171,7 @@ const UserProfile = () => {
         </button>
       </form>
 
-      <div className="flex justify-between mt-5">
-        <span
-          onClick={handleDeleteUser}
-          className="text-[#E73636] cursor-pointer hover:underline"
-        >
-          Delete account
-        </span>
+      <div className="flex justify-end mt-5">
         <span
           onClick={handleSignOut}
           className="text-[#E73636] cursor-pointer hover:underline"
@@ -210,4 +187,4 @@ const UserProfile = () => {
   );
 };
 
-export default UserProfile;
+export default AdminProfile;
