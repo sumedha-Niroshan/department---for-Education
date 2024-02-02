@@ -4,6 +4,7 @@ import Dashbordicon from "../assets/icon-1.png";
 import { DocumentTextIcon, CalendarIcon } from "@heroicons/react/24/solid";
 import CheckedIcon from "../assets/icon-3.png";
 import WaitingIcon from "../assets/icon-2.png";
+import ApplicationView from "../components/ApplicationView";
 
 export default function AdminDashbord() {
   return (
@@ -11,12 +12,12 @@ export default function AdminDashbord() {
       <div>
         <AdminSideMenu />
       </div>
-      <div className="border border-black lg:mr-20 m-8 sm:w-full flex flex-col gap-6">
+      <div className="lg:mr-20 m-8 sm:w-full flex flex-col gap-6">
         <div className="flex items-center gap-3 ">
           <img src={Dashbordicon} alt="dashbord" className="w-7 h-7" />
           <p className="text-[#1C83E5] text-3xl font-semibold">Dashboard</p>
         </div>
-        <div className="flex  flex-col sm:flex-row justify-between gap-5 lg:gap-12  border border-black">
+        <div className="flex  flex-col sm:flex-row justify-between gap-5 lg:gap-12 ">
           <div className="flex flex-col justify-center items-center bg-white p-2 lg:px-16 lg:py-8 gap-3 sm:w-1/3  rounded-lg">
             <DocumentTextIcon className="h-10 w-10 text-[#555555]" />
             <p className="text-[#555555] text-xl lg:text-3xl">
@@ -40,7 +41,7 @@ export default function AdminDashbord() {
           </div>
         </div>
         <div className="flex items-center gap-3 ">
-          <CalendarIcon className="h-10 w-10 text-[#1C83E5]" />
+          <CalendarIcon className="h-8 w-8 text-[#1C83E5]" />
           <p className="text-[#1C83E5] text-3xl font-semibold">
             Last Recent Application
           </p>
@@ -52,6 +53,7 @@ export default function AdminDashbord() {
             <p  className="hidden lg:inline">Zonal</p>
             <p>Option</p>
         </div>
+        <ApplicationView/>
       </div>
     </div>
   );

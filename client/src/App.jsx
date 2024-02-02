@@ -9,6 +9,7 @@ import PrivatAdmin from "./components/PrivatAdmin"
 import PrivatUser from "./components/PrivatUser";
 import AdminProfile from "./pages/AdminProfile";
 import AdminDashbord from "./pages/AdminDashbord";
+import AdminApplication from "./pages/AdminApplication";
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
       <Route element={<PrivatAdmin/>}>
         <Route path="/admin-profile" element={<AdminProfile/>}/>
         <Route path="/admin-dashbord" element={<AdminDashbord/>}/>
+        <Route path="/admin-application" element={<AdminApplication/>}/>
       </Route>
       </Routes>
     </BrowserRouter>

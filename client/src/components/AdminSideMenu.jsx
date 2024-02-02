@@ -22,21 +22,21 @@ export default function AdminSideMenu() {
     <div className="">
       <div className={`sm:flex ${showSidebar ? "" : "hidden"}`}>
         <ul className="text-[#555555] bg-[#EFEFEF] p-7 px-10 gap-10 flex flex-col text-2xl font-semibold">
-          <Link className="hover:text-[#1C83E5]">
+          <Link to="/admin-dashbord" className="hover:text-[#1C83E5]">
             <li className="flex items-center gap-3">
               <HomeIcon className="h-10 w-10 " />
               <span>Dashbord</span>
             </li>
           </Link>
 
-          <Link to="/admin-dashbord" className=" hover:text-[#1C83E5]">
+          <Link to="/admin-application" className=" hover:text-[#1C83E5]">
             <li className="flex items-center  gap-3">
               <DocumentTextIcon className="h-10 w-10" />
               <span> Applications</span>
             </li>
           </Link>
 
-          <Link className="hover:text-[#1C83E5]">
+          <Link to="" className="hover:text-[#1C83E5]">
             <li className="flex items-center gap-3">
               <DocumentArrowUpIcon className="h-10 w-10" />
               <span>
