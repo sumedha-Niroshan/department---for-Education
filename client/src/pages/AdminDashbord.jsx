@@ -27,16 +27,12 @@ export default function AdminDashbord() {
           </div>
           <div className="flex flex-col justify-center items-center bg-white p-2 lg:px-16 sm:w-1/3  lg:py-8 gap-3 rounded-lg">
             <img src={CheckedIcon} alt="icon" className="w-8 h-8" />
-            <p className="text-[#555555] text-xl lg:text-3xl">
-            Checked
-            </p>
+            <p className="text-[#555555] text-xl lg:text-3xl">Checked</p>
             <p className="text-5xl font-bold">200</p>
           </div>
           <div className="flex flex-col justify-center items-center bg-white lg:px-16 sm:w-1/3  lg:py-8 p-2 gap-3 rounded-lg">
             <img src={WaitingIcon} alt="icon" className="w-8 h-8" />
-            <p className="text-[#555555] text-xl lg:text-3xl">
-            Waiting
-            </p>
+            <p className="text-[#555555] text-xl lg:text-3xl">Waiting</p>
             <p className="text-5xl font-bold">150</p>
           </div>
         </div>
@@ -46,14 +42,7 @@ export default function AdminDashbord() {
             Last Recent Application
           </p>
         </div>
-        <div className="flex justify-between text-lg font-semibold border-black border-b-2 px-5">
-            <p>NO</p>
-            <p>Name</p>
-            <p className="hidden md:inline">Previous  School</p>
-            <p  className="hidden lg:inline">Zonal</p>
-            <p>Option</p>
-        </div>
-        <ApplicationView/>
+        <ApplicationView />
       </div>
     </div>
   );

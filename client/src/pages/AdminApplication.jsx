@@ -13,7 +13,7 @@ export default function AdminApplication() {
       <div>
         <AdminSideMenu />
       </div>
-      <div className="lg:mr-2 m-8 sm:w-full flex flex-col gap-6 bordedr border-red-700">
+      <div className="lg:mr-2 m-8 sm:w-full flex flex-col gap-6">
         <div className="flex items-center gap-3 text-[#1C83E5] ">
           <DocumentTextIcon className="h-10 w-10" />
           <p className="text-[#1C83E5] text-3xl font-semibold">Applications</p>

@@ -10,6 +10,8 @@ import PrivatUser from "./components/PrivatUser";
 import AdminProfile from "./pages/AdminProfile";
 import AdminDashbord from "./pages/AdminDashbord";
 import AdminApplication from "./pages/AdminApplication";
+import AccepetApplication from "./pages/AccepetApplication";
+import RejectApplication from "./pages/RejectApplication";
 
 export default function App() {
   return (
@@ -27,6 +29,8 @@ export default function App() {
         <Route path="/admin-profile" element={<AdminProfile/>}/>
         <Route path="/admin-dashbord" element={<AdminDashbord/>}/>
         <Route path="/admin-application" element={<AdminApplication/>}/>
+        <Route path="/admin-accept-aplication" element={<AccepetApplication/>}/>
+        <Route path="/admin-reject-aplication" element={<RejectApplication/>}/>
       </Route>
       </Routes>
     </BrowserRouter>

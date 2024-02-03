@@ -36,7 +36,7 @@ export default function AdminSideMenu() {
             </li>
           </Link>
 
-          <Link to="" className="hover:text-[#1C83E5]">
+          <Link  to="/admin-accept-aplication" className="hover:text-[#1C83E5]">
             <li className="flex items-center gap-3">
               <DocumentArrowUpIcon className="h-10 w-10" />
               <span>
@@ -44,7 +44,7 @@ export default function AdminSideMenu() {
               </span>
             </li>
           </Link>
-          <Link className="hover:text-[#1C83E5]">
+          <Link to="/admin-reject-aplication" className="hover:text-[#1C83E5]">
             <li className="flex items-center gap-3">
               <DocumentArrowDownIcon className="h-10 w-10" />
               <span>
