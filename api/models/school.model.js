@@ -4,43 +4,59 @@ const schoolSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      require: true,
+      required: true,
     },
     address: {
       type: String,
-      require: true,
+      required: true,
     },
     zonal: {
       type: String,
-      require: true,
+      required: true,
     },
     type: {
       type: String,
-      require: true,
+      required: true,
     },
     totalStudent: {
       type: String,
-      require: true,
+      required: true,
     },
     totalTeacher: {
       type: String,
-      require: true,
+      required: true,
     },
-    stream: {
-      type: Array,
-      require: true,
+    maths: {
+      type: Boolean,
+      required: true,
+    },
+    bio: {
+      type: Boolean,
+      required: true,
+    },
+    commerce: {
+      type: Boolean,
+      required: true,
+    },
+    art: {
+      type: Boolean,
+      required: true,
+    },
+    tech: {
+      type: Boolean,
+      required: true,
     },
     description: {
       type: String,
-      require: true,
+      required: true,
     },
     imageUrls: {
       type: Array,
-      require: true,
+      required: true,
     },
-    useRef: {
+    userRef: {
       type: String,
-      require: true,
+      required: true,
     },
   },
   { timestamps: true }
