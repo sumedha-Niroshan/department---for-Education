@@ -5,10 +5,10 @@ import { PencilSquareIcon } from "@heroicons/react/24/solid";
 export default function CreateSchoolProfile() {
   return (
     <div className="sm:flex ">
-      <div className=" border border-black">
+      <div className=" ">
         <AdminSideMenu />
       </div>
-      <div className="sm:pr-20 m-3 sm:m-8 sm:w-full flex flex-col gap-6 border border-black">
+      <div className="sm:pr-20 m-3 sm:m-8 sm:w-full flex flex-col gap-6">
        
           <div className="flex items-center gap-3 text-[#1C83E5] ">
             <PencilSquareIcon className="h-10 w-10" />
@@ -16,7 +16,8 @@ export default function CreateSchoolProfile() {
               Create school profile
             </p>
           </div>
-          <div className="gap-4 flex flex-col border border-black">
+          <div className="gap-4 flex flex-col ">
+
             <div className="flex flex-col w-full">
               <label className="text-[#555555]">
                 School name <span className="text-[#E73636]">*</span>
@@ -27,7 +28,7 @@ export default function CreateSchoolProfile() {
                 id="schoolname"
               />
             </div>
-            <div className="sm:flex sm:gap-4 sm:justify-between">
+            <form className="sm:flex sm:gap-4 sm:justify-between">
               <div className="flex flex-col w-full ">
                 <label className="text-[#555555]">
                   Address <span className="text-[#E73636]">*</span>
@@ -48,7 +49,7 @@ export default function CreateSchoolProfile() {
                   id="zonal"
                 />
               </div>
-            </div>
+            </form>
             <div className="sm:flex sm:gap-4 sm:justify-between">
               <div className="flex flex-col w-full ">
                 <label className="text-[#555555]">
