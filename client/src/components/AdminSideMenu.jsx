@@ -53,7 +53,7 @@ export default function AdminSideMenu() {
             </li>
           </Link>
 
-          <Link className="hover:text-[#1C83E5]">
+          <Link to="/create-school-profile" className="hover:text-[#1C83E5]">
             <li className="flex items-center gap-3">
               <PencilSquareIcon className="h-10 w-10" />
               <span> Create Profile</span>

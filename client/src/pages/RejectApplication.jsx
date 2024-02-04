@@ -17,9 +17,10 @@ export default function RejectApplication() {
               Rejected Applications
             </p>
           </div>
+          <ApplicationView />
         </div>
        
-        <ApplicationView />
+       
       </div>
     </div>
   );

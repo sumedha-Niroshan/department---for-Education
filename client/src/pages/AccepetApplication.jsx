@@ -17,8 +17,9 @@ export default function AccepetApplication() {
               Accepet Applications
             </p>
           </div>
+          <ApplicationView />
         </div>
-        <ApplicationView />
+       
       </div>
     </div>
   );

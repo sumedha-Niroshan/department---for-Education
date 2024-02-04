@@ -12,6 +12,7 @@ import AdminDashbord from "./pages/AdminDashbord";
 import AdminApplication from "./pages/AdminApplication";
 import AccepetApplication from "./pages/AccepetApplication";
 import RejectApplication from "./pages/RejectApplication";
+import CreateSchoolProfile from "./pages/CreateSchoolProfile";
 
 export default function App() {
   return (
@@ -31,6 +32,7 @@ export default function App() {
         <Route path="/admin-application" element={<AdminApplication/>}/>
         <Route path="/admin-accept-aplication" element={<AccepetApplication/>}/>
         <Route path="/admin-reject-aplication" element={<RejectApplication/>}/>
+        <Route path="/create-school-profile" element={<CreateSchoolProfile/>}/>
       </Route>
       </Routes>
     </BrowserRouter>
