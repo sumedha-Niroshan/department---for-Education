@@ -2,8 +2,7 @@ import express from "express";
 import {
   updateUser,
   deleteUser,
-  getUserListing,
-  getUser,
+ 
 } from "../controllers/user.controller.js";
 import { verifyUser } from "../Utils/verifyUser.js";
 
